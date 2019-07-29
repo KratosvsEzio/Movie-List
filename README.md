@@ -3,7 +3,7 @@
 •	Lazy Loading
 •	Store data in browser Storage
 •	How to use OMDb API
-•	Services and observables.]
+•	Services and observables.
 
 ## Installation Proccess
 
