@@ -1,0 +1,63 @@
+<div id="movies-list" *ngIf="movies">
+  <button type="button" onclick="myFunction()" class="scroll">Scroll Middle</button>
+
+  <div class="movies-list" *ngFor="let movie of movies">
+    <mat-card class="movie-card">
+      <!-- movie title and year -->
+      <div class="movie-card-header">
+        <div class="font-weight-bolder">
+          <a class="link" routerLink = "/movie-page/{{movie.imdbID}}" routerLinkActive="active">
+            {{movie.Title}}
+          </a>
+        </div>
+        <div class="movie-year">{{movie.Year}}</div>
+      </div>
+
+      <!-- movie poster -->
+      <img mat-card-image src={{movie.Poster}} alt={{movie.Title}}>
+
+      <!-- movie action btns -->
+      <mat-card-actions>
+        <div class="movie-card-btns" *ngIf="tab == 1">
+          <button
+            class="action-buttons"
+            mat-raised-button
+            color="accent"
+            (click)="favorite(movie)"
+            >Favorite</button>
+        </div>
+        <div class="movie-card-btns" *ngIf="tab == 2">
+          <button
+            class="action-buttons"
+            mat-raised-button
+            color="warn"
+            (click)="remove(movie)"
+            >Remove</button>
+          <button
+            routerLink = "/movie-page/{{movie.imdbID}}"
+            routerLinkActive="active"
+            class="action-buttons"
+            mat-raised-button
+            color="primary"
+            >View Details</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+  <!-- movie list pagination -->
+  <div class="pagination" *ngIf="tab == 1">
+    <div *ngIf="pageIndex != 1; else previousDisabled" class="previous" (click)="previous()">previous</div>
+    <ng-template #previousDisabled>
+      <div class="previous disabled">
+        previous
+      </div>
+    </ng-template>
+    <div *ngIf="pageIndex != maxPageIndex; else nextDisabled" class="next" (click)="next()">next</div>
+    <ng-template #nextDisabled>
+      <div class="next disabled">
+        next
+      </div>
+    </ng-template>
+  </div>
+</div>

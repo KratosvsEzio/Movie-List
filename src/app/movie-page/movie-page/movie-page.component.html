@@ -1,0 +1,53 @@
+<div *ngIf="movie">
+  <mat-card class="movie-card">
+    <div class="movie">
+        <img mat-card-image src={{movie.Poster}} alt={{movie.Title}}>
+
+        <div class="movie-details">
+          <div class="movie-header">
+            <mat-card-title class="font-weight-bolder">{{movie.Title}}</mat-card-title>
+            <mat-card-subtitle>({{movie.Year}})</mat-card-subtitle>
+          </div>
+          <div class="moive-actions">
+            <mat-card-actions>
+              <div class="movie-card-btns">
+                <button
+                  class="action-buttons"
+                  mat-raised-button
+                  color="accent"
+                  (click)="favorite(movie)"
+                  >Favorite</button>
+              </div>
+            </mat-card-actions>
+            <div class="movie-ratings font-weight-bold">{{movie.Ratings[0].Value}}</div>
+          </div>
+          <div class="movie-genres">
+            <span class="font-weight-bold">Genre:</span>
+            <span class="font-weight-normal"> {{movie.Genre}}</span>
+          </div>
+          <div class="movie-actors">
+            <span class="font-weight-bold">Actors:</span>
+            <span class="font-weight-normal"> {{movie.Actors}}</span>
+          </div>
+          <div class="movie-director">
+            <span class="font-weight-bold">Director:</span>
+            <span class="font-weight-normal"> {{movie.Director}}</span>
+          </div>
+          <div class="movie-plot">
+            <span class="font-weight-bold">Plot:</span>
+            <span class="font-weight-normal"> &nbsp;&nbsp; {{movie.Plot}}</span>
+          </div>
+        </div>
+    </div>
+
+    <div class="back">
+      <a
+      class="action-buttons link"
+      mat-raised-button
+      color="primary"
+      (click) = "backClicked()"
+      >Go Back</a>
+
+    </div>
+  </mat-card>
+</div>
