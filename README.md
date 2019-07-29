@@ -1,22 +1,28 @@
+## Description
+
+Its a simple web app where a user can search for movies, see a detail for a particular movie and can favorite / unfavorite them.
+Using the OMDB API to retrieve the information.
+
 ## Things I learned
 
-•	Lazy Loading
-•	Store data in browser Storage
-•	How to use OMDb API
-•	Services and observables.
+* Lazy Loading
+* Lazy Loading
+* Store data in browser Storage
+* How to use OMDb API
+* Services and observables.
 
 ## Installation Proccess
 
 Following are the steps for installing the app dependencies.
-•	Install Node js from https://nodejs.org/en/download/
-•	Open cmd administrator
-•	Run command (npm install -g @angular/cli)
-•	After that open the folder movieList in cmd
-•	Run command (npm install)
-•	Run command (ng serve)
-•	Open any browser
-•	Enter url (localhost:4200)
-•	App will open in the browser. 
+* Install Node js from https://nodejs.org/en/download/
+* Open cmd administrator
+* Run command (npm install -g @angular/cli)
+* After that open the folder movieList in cmd
+* Run command (npm install)
+* Run command (ng serve)
+* Open any browser
+* Enter url (localhost:4200)
+* App will open in the browser. 
 
 # MoiveList
 
