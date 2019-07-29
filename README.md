@@ -1,3 +1,23 @@
+## Things I learned
+
+•	Lazy Loading
+•	Store data in browser Storage
+•	How to use OMDb API
+•	Services and observables.]
+
+## Installation Proccess
+
+Following are the steps for installing the app dependencies.
+•	Install Node js from https://nodejs.org/en/download/
+•	Open cmd administrator
+•	Run command (npm install -g @angular/cli)
+•	After that open the folder movieList in cmd
+•	Run command (npm install)
+•	Run command (ng serve)
+•	Open any browser
+•	Enter url (localhost:4200)
+•	App will open in the browser. 
+
 # MoiveList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
