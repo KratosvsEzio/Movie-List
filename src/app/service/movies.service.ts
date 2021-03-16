@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class MoviesService {
 
-  private chatURL = 'http://www.omdbapi.com/?';
+  private chatURL = 'https://www.omdbapi.com/?';
   private key = '8cb915b';
   private movies = [];
   private moiveUpdated = new BehaviorSubject<any>([]);
