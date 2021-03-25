@@ -82,3 +82,9 @@ button:first-child{
   color: #808080!important;
   cursor: context-menu!important;
 }
+
+.not-found{
+  text-align: center;
+  margin-top: 100px;
+  color: rgba(0, 0, 0, 0.6);
+}

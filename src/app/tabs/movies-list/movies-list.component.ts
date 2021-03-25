@@ -23,7 +23,7 @@ export class MoviesListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.movies = this.moviesService.defaultMovies();
+    // this.movies = this.moviesService.defaultMovies();
     if (this.tab == 1) {
       this.moviesService.getMoiveUpdateListener().subscribe( (movies) => {
         this.movies = movies.Search;

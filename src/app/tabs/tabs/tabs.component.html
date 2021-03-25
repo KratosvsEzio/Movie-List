@@ -2,40 +2,30 @@
   <mat-tab-group mat-align-tabs="center">
     <mat-tab label="Search">
       <ng-template matTabContent>
-        <form
-          id="searchMovieForm"
-          *ngIf="!isLoading"
-          [formGroup]='searchMovie'
-          (ngSubmit)="searchMovieForm(searchMovie)"
-        >
+        <form id="searchMovieForm" [formGroup]='searchMovie' (ngSubmit)="searchMovieForm(searchMovie)">
           <div class="mb-3 search">
             <mat-form-field appearance="outline">
               <mat-label>Search Movie</mat-label>
-              <input
-                matInput
-                type="text"
-                formControlName="movie"
-                class="searchInput"
-                placeholder="Enter Movie Title">
+              <input matInput type="text" formControlName="movie" class="searchInput" (paste)="search()"
+                (keyup)="search()" placeholder="Enter Movie Title">
             </mat-form-field>
 
-            <button
-              mat-raised-button
-              color="primary"
-              *ngIf="!isLoading"
-              [disabled]="!searchMovie.valid"
-              type="submit"
-              class="text-uppercase search-btn">Search</button>
+            <button mat-raised-button color="primary" *ngIf="!isLoading" [disabled]="!searchMovie.valid" type="submit"
+              class="text-uppercase search-btn">
+              Search
+            </button>
           </div>
         </form>
-        <app-movies-list tab = 1></app-movies-list>
+        <div *ngIf="isLoading" class="d-flex justify-content-center" style="min-height: 200px;">
+          <mat-spinner></mat-spinner>
+        </div>
+        <app-movies-list *ngIf="!isLoading" tab=1></app-movies-list>
       </ng-template>
     </mat-tab>
     <mat-tab label="Favorite">
       <ng-template matTabContent>
-        <app-movies-list tab = 2></app-movies-list>
+        <app-movies-list tab=2></app-movies-list>
       </ng-template>
     </mat-tab>
   </mat-tab-group>
 </div>
-<mat-progress-spinner *ngIf="isLoading" class="example-section"></mat-progress-spinner>
