@@ -5,7 +5,7 @@ Using the OMDB API to retrieve the information.
 
 ## Things I learned
 
-* Lazy Loading
+* Eager Loading
 * Lazy Loading
 * Store data in browser Storage
 * How to use OMDb API
